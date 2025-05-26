@@ -61,6 +61,8 @@ public class UserController {
     }
 
     UserEntity user = new UserEntity();
+    user.setFirstName(userForm.getFirstName());
+    user.setLastName(userForm.getLastName());
     user.setEmail(userForm.getEmail());
     user.setPassword(userForm.getPassword());
 

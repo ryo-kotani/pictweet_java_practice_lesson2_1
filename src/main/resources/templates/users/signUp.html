@@ -20,6 +20,16 @@
       <form th:action="@{/user}" th:method="post" th:object="${userForm}" class="new_user">
 
         <div class="field">
+          <label for="first_name">First Name</label><br />
+          <input type="text" id="first_name" th:field="*{firstName}" autofocus="autofocus" />
+        </div>
+
+        <div class="field">
+          <label for="last_name">Last Name</label><br />
+          <input type="text" id="last_name" th:field="*{lastName}" />
+        </div>
+
+        <div class="field">
           <label for="email">Email</label><br />
           <input type="email" id="email" th:field="*{email}" />
         </div>
