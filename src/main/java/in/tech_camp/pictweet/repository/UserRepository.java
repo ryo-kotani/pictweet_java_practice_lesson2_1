@@ -9,7 +9,7 @@ import in.tech_camp.pictweet.entity.UserEntity;
 
 @Mapper
 public interface UserRepository {
-  @Insert("INSERT INTO users (email, password) VALUES (#{email}, #{password})")
+  @Insert("INSERT INTO users (email, password, first_name, last_name) VALUES (#{email}, #{password}, #{firstName}, #{lastName})")
   @Options(useGeneratedKeys = true, keyProperty = "id")
   void insert(UserEntity user);
 
